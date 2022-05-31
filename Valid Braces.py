@@ -18,8 +18,7 @@ Examples
 '''
 
 def valid_braces(string):
-    braces_list = ['()', '[]', '{}']
-    while len(string) > 1:
+    while string:
         if '()' in string: 
             string = string.replace('()','')
         elif '{}' in string: 
@@ -27,8 +26,5 @@ def valid_braces(string):
         elif '[]' in string: 
             string = string.replace('[]','')
         else:
-            break
-    if len(string) > 0:
-        return False
-    else:
-        return True
+            return False
+    return True
