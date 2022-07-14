@@ -14,24 +14,6 @@ make_readable(86399), "23:59:59"
 make_readable(359999), "99:59:59"
 """
 
-
-# def make_readable(seconds):
-#     time = ''
-#     for i in range(0, 2):
-#         floor_division = seconds // 60
-#         modulus = seconds % 60
-#         if modulus > 9:
-#             time = ':' + str(modulus) + time
-#         else:
-#             time = ':0' + str(modulus) + time
-#         seconds = floor_division
-#     modulus = seconds % 100
-#     if modulus > 9:
-#         time = ':' + str(modulus) + time
-#     else:
-#         time = ':0' + str(modulus) + time
-#     return time[1:]
-
 def make_readable(seconds):
     minutes, seconds = divmod(seconds,60)
     hours, minutes = divmod(minutes,60)
