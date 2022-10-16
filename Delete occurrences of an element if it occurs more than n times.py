@@ -32,3 +32,11 @@ def delete_nth(order, max_e):
                 max_e_dict[element] += 1
                 new_order.append(element)
     return new_order
+
+
+def delete_nth_2(order, max_e):
+    new_order = []
+    for element in order:
+        if new_order.count(element) < max_e:
+            new_order.append(element)
+    return new_order
